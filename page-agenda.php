@@ -61,7 +61,7 @@ Template Name: Agenda
 									<div class="bigdatediv"><a href=""><h1><span class="bigdate">{{post.date | amDateFormat:'DD.MM'}}</span></h1></a></div>
 									<div class="eventtitlediv"><a href=""><h1><span class="eventtitle">{{post.title}}</span></h1></a>
 									<span class="eventinfo"><a href="" ng-click="filters.location_name = post.location_name ; filtered()">
-									<span class="location">{{post.location_name}}, </span></a>
+									<span class="location">{{post.location_name}}, </span></a><span ng-show="loading[$index]" class="pull-right glyphicon glyphicon-remove hidden-lg"></span>
 									<a href="" ng-click="filters.location_city = post.location_city ; filtered()"><span class="ort">{{post.location_city}}</span></a>
 									</span>
 									</div>
