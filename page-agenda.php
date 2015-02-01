@@ -59,9 +59,10 @@ Template Name: Agenda
 							ng-click="$event.preventDefault(); select($index); loading[$index]=!loading[$index]" ng-class="{selected: $index == selected}">
 								<header class="eventheader" id="{{post.ID}}">
 									<div class="bigdatediv"><a href=""><h1><span class="bigdate">{{post.date | amDateFormat:'DD.MM'}}</span></h1></a></div>
+									<span ng-show="loading[$index]" class="pull-right glyphicon glyphicon-remove remove hidden-lg"></span>
 									<div class="eventtitlediv"><a href=""><h1><span class="eventtitle">{{post.title}}</span></h1></a>
 									<span class="eventinfo"><a href="" ng-click="filters.location_name = post.location_name ; filtered()">
-									<span class="location">{{post.location_name}}, </span></a><span ng-show="loading[$index]" class="pull-right glyphicon glyphicon-remove hidden-lg"></span>
+									<span class="location">{{post.location_name}}, </span></a>
 									<a href="" ng-click="filters.location_city = post.location_city ; filtered()"><span class="ort">{{post.location_city}}</span></a>
 									</span>
 									</div>

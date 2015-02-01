@@ -776,7 +776,10 @@ footer .socialicons_header {
 	overflow-y: scroll;
 }
 
-
+.remove {
+	font-size: 20px;
+	margin: 5px;
+}
 /***********************
 / MEDIA QUERIES AGENDA  /
 /**********************/
